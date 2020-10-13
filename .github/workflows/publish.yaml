@@ -18,7 +18,7 @@ jobs:
           sed "s/0.27.2-development-version/${GITHUB_REF/refs\/tags\/v}/g" cmake/CPM.cmake > dist/CPM.cmake
           sed "s/0.27.2-development-version/${GITHUB_REF/refs\/tags\/v}/g" cmake/get_cpm.cmake > dist/get_cpm.cmake
 
-      - name: Upload CPM.cmake to release from kensou24
+      - name: Upload CPM.cmake to release from kensou24 gen
         uses: svenstaro/upload-release-action@v1-release
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
